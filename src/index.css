@@ -1,13 +1,110 @@
 body {
+  font-family: 'Rubik', sans-serif;
+  background: -webkit-linear-gradient(90deg, #01152c,#00273e,#134057);
+  background: linear-gradient(90deg, #01152c,#00273e,#134057);
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  color: #dbdada;
+}
+
+nav {
+  background-color: #33333300;
+  padding: 30px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #dbdada;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px;
+}
+
+.photo-card {
+  position: relative;
+  width: 200px;
+  height: 250px; 
+  overflow: hidden;
+  border: 1px solid #dbdada;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #dbdada;
+  text-align: center;
+}
+
+.photo-card img {
+  width: 100%;
+  height: 200px; 
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.photo-card .author {
+  padding: 12px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #00273E;
+}
+
+.photo-card button {
+  position: absolute;
+  top: 10px; 
+  right: 10px; 
+  background-color: #dbdada; 
+  color: #ff4757;
+  border: 1px solid #ff4757;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.photo-card button:hover {
+  background-color: #ff4757;
+  color: #dbdada;
+}
+
+.photo-card button:before {
+  content: '❤';
+}
+
+.photo-card.favorited button {
+  background-color: #ff4757; 
+  color: #dbdada;
+  border: none;
+}
+
+.photo-card.favorited button:hover {
+  background-color: #e04050;
 }
